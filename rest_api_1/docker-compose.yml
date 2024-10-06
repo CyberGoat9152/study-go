@@ -1,0 +1,9 @@
+services:
+  go-postgres:  
+    image: postgres:latest
+    env_file:
+      - ./database/env/postgres.env
+    ports:
+      - 54032:5432
+    volumes:
+      - ./database/postgres_data:/var/lib/postgresql/data
